@@ -1,0 +1,30 @@
+<assembly>
+	<id>prod</id>
+	<formats>
+		<format>dir</format>
+	</formats>
+
+	<dependencySets>
+		<dependencySet>
+			<unpack>false</unpack>
+			<scope>runtime</scope>
+			<outputDirectory>lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		<fileSet>
+			<lineEnding>unix</lineEnding>
+			<directory>target/tmp/bin</directory>
+			<directoryMode>755</directoryMode>
+			<outputDirectory>bin</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<lineEnding>unix</lineEnding>
+			<directory>target/tmp/etc</directory>
+			<directoryMode>755</directoryMode>
+			<outputDirectory>etc</outputDirectory>
+			<filtered>true</filtered>
+		</fileSet>
+	</fileSets>
+</assembly>

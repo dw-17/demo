@@ -1,0 +1,3 @@
+##github language type##
+*.xml linguist-language=java
+*.properties linguist-language=java

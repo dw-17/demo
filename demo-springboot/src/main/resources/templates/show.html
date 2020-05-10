@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>This is SpringBoot Demo</title>
+</head>
+<body>
+	<table>
+		<tr th:text="${dataList}"></tr>
+		<tr th:text="${dataList[0]}"></tr>
+		<tr th:text="${dataList[1]}"></tr>
+		<tr th:text="${dataList[2]}"></tr>
+	</table>
+	<table>
+		<tr th:each="list : ${dataList}">
+			<td th:text="${list}"></td>
+			<td><a th:href="s">Send</a></td>
+		</tr>
+	</table>
+	
+	<!-- <script th:inline="javascript" type="text/javascript">
+        <![CDATA[
+                var name = [[${dataJson}]];
+                console.log(name);
+                for(var x in name){
+                	console.log(name[x]);
+                }
+                console.log(typeof name);
+                var name1 = JSON.parse(name);
+                console.log(typeof name);
+        ]]>
+    </script> -->
+</body>
+</html>

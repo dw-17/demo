@@ -1,0 +1,5 @@
+##git ignore the below files##
+.idea
+*.iml
+*.class
+/out

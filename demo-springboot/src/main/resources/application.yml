@@ -1,0 +1,38 @@
+#thymeleaf config
+spring.thymeleaf.cache : false
+
+server:
+    port: 8080
+    context: /demo
+
+#测试@value注解
+name: Mike  
+sex: boy
+age: 18
+combination: "${name}, ${sex}, ${age}"
+
+#测试@ConfigurationProperties
+student:
+    name: Lucy  
+    sex: girl
+    age: 22
+
+#测试Map
+personal:
+    person:
+        student:
+            name: Alisa
+            sex: girl
+            age: 12
+
+#测试List
+grop:
+    studentList:
+    -
+      name: Jenny
+      sex: girl
+      age: 23 
+    -
+      name: Jone
+      sex: boy
+      age: 29  

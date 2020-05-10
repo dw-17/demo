@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr th:each="data : ${dataJson}">
+			<td>
+				<table>
+					<tr th:each="list : ${data.value}">
+						<td>
+							<table>
+								<tr id="userName" th:each="user : ${list}">
+									<td><textarea th:text="${user.username}">username</textarea></td>
+									<td><textarea th:text="${user.password}">password</textarea></td>
+									<td><input id="bt" type="button" value="按钮"
+										onclick="getdata(this)"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		function getdata(e) {
+			var trParent = $(e).parent().parent();
+			console.log(trParent);
+			var tdChild1 = trParent.length;
+			var tdChild = tdChild1.firstChild;
+			console.log(tdChild);
+		}
+	</script>
+</body>
+</html>
